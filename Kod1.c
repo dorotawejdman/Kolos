@@ -8,7 +8,6 @@ struct node
     struct node *left, *right;
 };
   
-// A utility function to create a new BST node
 struct node *newNode(int item)
 {
     struct node *temp =  (struct node *)malloc(sizeof(struct node));
@@ -16,9 +15,7 @@ struct node *newNode(int item)
     temp->left = temp->right = NULL;
     return temp;
 }
-  
-// A utility function to do inorder traversal of BST
-void inorder(struct node *root)
+void inorder(struct node **root)
 {
     if (root != NULL)
     {
