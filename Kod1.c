@@ -1,13 +1,13 @@
-// C program to demonstrate insert operation in binary search tree
+
 #include<stdio.h>
 #include<stdlib.h>
-  
+
 struct node
 {
     int key;
     struct node *left, *right;
 };
-  
+
 struct node *newNode(int item)
 {
     struct node *temp =  (struct node *)malloc(sizeof(struct node));
