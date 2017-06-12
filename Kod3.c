@@ -1,4 +1,4 @@
-// A utility function to do inorder traversal of BST
+
 void inorder(struct node *root)
 {
     if (root != NULL)
@@ -8,7 +8,7 @@ void inorder(struct node *root)
         inorder(root->right);
     }
 }
-//stosowny komenatrz
+
 struct node* insert(struct node* node, int key)
 {
     /* If the tree is empty, return a new node */
