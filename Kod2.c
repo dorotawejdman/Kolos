@@ -1,23 +1,32 @@
-// Driver Program to test above functions
-int main()
+typedef struct treeNode
 {
-    /* Let us create following BST
-              50
-           /     \
-          30      70
-         /  \    /  \
-       20   40  60   80 */
-    struct node *root = NULL;
-    root = insert(root, 50);
-    insert(root, 30);
-    insert(root, 20);
-    insert(root, 40);
-    insert(root, 70);
-    insert(root, 60);
-    insert(root, 80);
+        int data;
+        struct treeNode *left;
+        struct treeNode *right;
 
-    // print inoder traversal of the BST
-    inorder(root);
+}treeNode;
 
-    return 0;
+treeNode* FindMin(treeNode *node)
+{
+        if(node==NULL)
+        {
+                /* There is no element in the tree */
+                return NULL;
+        }
+        if(node->left) /* Go to the left sub tree to find the min element */
+                return FindMin(node->left);
+        else 
+                return node;
+}
+treeNode* FindMax(treeNode *node)
+{
+        if(node==NULL)
+        {
+                /* There is no element in the tree */
+                return NULL;
+        }
+        if(node->right) /* Go to the left sub tree to find the min element */
+                FindMax(node->right);
+        else 
+                return node;
 }
