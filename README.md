@@ -1,1 +1,2 @@
 # Kolos
+Dorota Wejdman
